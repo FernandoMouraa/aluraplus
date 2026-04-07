@@ -1,0 +1,163 @@
+:root{ /*Define variaveis de cor e fonte para facilitar o desenvolvimento*/
+    --branco-principal:#FFFFFF;
+    --cinza-secundario:#C0C0C0;
+    --botao-azul:#167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal:'Inter';
+    --botao-azul-efeito:#3c92fa;
+}
+
+body{ /*Todos os elementos dentro do body terão esses valores*/
+    background-color: var(--cor-de-fundo);/* define a cor do fundo*/
+    color: var(--branco-principal);/*escrita na cor branca*/
+    font-family: var(--fonte-principal);/*fonte*/
+    font-size: 16px;/*tamanho das letras*/
+    font-weight: 400;/*grossura do negrito*/
+}
+
+*{          /*zera as margens da tela*/
+    margin: 0;
+    padding: 0;
+}
+
+.principal{
+    background-image:url("img/Background.png") ;/*Imagem de fundo*/
+    background-repeat: no-repeat;/*não repete a imagem*/
+    background-size: contain;/*deixa do tamanho do container*/
+    align-items: center;/*centraliza caixas de texto da seção*/
+    text-align: center;/*centraliza texto da seção*/
+}
+
+.container{
+    height: 100vh ;/*tamanho do container*/ 
+    display: grid;/*organizar elementos em linhas e colunas*/
+    grid-template-columns: 50% 50%;/*divide em proporção de grades atela*/
+}
+
+.container__botao{ /*criar botao */
+    background-color: var(--botao-azul); /*cor de fundo do botão*/
+    border-radius: 5px; /*Borda arredondada do botão*/
+    padding: 1em; /*Tamanho da fonte*/
+    color: var(--branco-principal); /*escrita na cor branca*/
+    display: block;/*define que o elemento vire um bloco*/
+    text-decoration: none;/*retira subilinhado de link*/
+    margin-bottom: 1em;/*margem do botão apenas de cima*/
+}
+
+.botao_secundario{
+    background-color: transparent;/* fundo transparente*/
+    border: 2px solid var(--branco-principal);/*coloco borda solida na cor branca*/
+}
+
+.container__aviso{
+    font-size: 12px;/*tamanho das letras*/
+    color: var(--cinza-secundario);/*escrita na cor cinza*/
+}
+
+.container__titulo{
+    font-size: 28px;/*tamanho das letras*/
+    font-weight: 700;/*grossura do negrito*/
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0;/*margem da imagem em todos os lados */
+}
+
+.container__caixa{
+    margin: 0 6em;/*margem encima e esquerda*/
+}
+
+.secundario__imagem{
+    width: 80%; /*tamanho da imagem*/
+}
+
+.secundario{
+    align-items: center;/*alinhamento de seção*/
+    margin: 0 10em;/*espaçamento de seção*/
+}
+
+.descricao__titulo{
+    font-weight: 700;/*grossura do negrito*/
+    font-size: 48px;/*tamanho das letras*/
+    color: var(--branco-principal);/*cor*/
+    margin-bottom: 0.1em;/*margem do botão lado direito*/
+}
+
+
+.descricao__texto{
+    color: var(--cinza-secundario);/*cor*/
+    font-size: 18px;
+}
+
+.secundario__botao{
+    display: inline-block;/* coloca o texto em linha e o block faz a quebra de linha do texto/botao*/
+    margin-top: 1em;/*margem entre o texto e o botão*/
+}
+
+.container__descricao{
+    padding: 2em;/* Da um espaço da div e a imagem*/
+}
+
+.dispositivos__lista{
+    display: flex;/* deixa itens um do lado do outro*/
+    justify-content: center;/*centraliza itens da lista*/
+    list-style-type: none ;/*Tira pontinhos de lista*/
+    margin: 5em 0;/*Define margem apenas para cima e baixo (5em), e margem (0) para os lados */
+}
+
+.dispositivos{
+    text-align: center;/*Centraliza a section dispositivos no meio da tela*/
+}
+
+.dispositivos__titulo{
+    font-size: 48px;/*Tamanho don Titulo H3*/
+    color: var(--branco-principal);/* cor para padronizar*/
+}
+
+.lista__item{
+    font-size: 32px;/*tamanho do texto */
+    color: var(--branco-principal);/* cor para padronizar*/
+}
+
+.rodape{
+    text-align: center;/*Centraliza a section dispositivos no meio da tela*/
+    margin-bottom: 5em;
+}
+
+.rodape__logo{
+    margin-top: 5em;
+}
+
+.rodape__lista{
+    display: flex;/* deixa itens um do lado do outro*/
+    justify-content: center;/*centraliza itens da lista*/
+    list-style-type: none ;/*Tira pontinhos de lista*/
+    margin: 2em 0;/*Define margem apenas para cima e baixo (5em), e margem (0) para os lados */
+    padding: 1em; /*Tamanho da fonte*/
+}
+.lista__link a{
+    font-size: 24px;/*tamanho do texto */
+    color: var(--branco-principal);/* cor para padronizar*/
+    margin: 1em;
+    text-decoration: none;
+    
+}
+
+.rodape__texto{
+    font-size: 14px;/*tamanho do texto */
+    margin: 2em 25em;/*Define margem apenas para cima e baixo (5em), e margem (0) para os lados */
+    color: var(--cinza-secundario);
+}
+
+.lista__link a:hover { /* quando passar o mouse encima dos links fica na coloração azul*/
+    color: var(--botao-azul);
+}
+
+.lista__link a:active{/*quando clico fica na cor roxa*/
+    color: purple;
+}
+
+.container__botao:hover{/* muda a cor quando passa o mouse*/
+    background-color: var(--botao-azul-efeito);
+    color:var(--cor-de-fundo);
+}
